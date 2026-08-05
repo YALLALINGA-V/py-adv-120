@@ -1,0 +1,29 @@
+#--------------------------------------------recursionn------------------------------------------------
+
+#q1: wap to print numbers from 1 to N using recursion 
+
+# def print_num_from_1_to_n(i,num):
+#     if i>num:
+#         return
+#     print(i)
+#     i=i+1
+#     print_num_from_1_to_n(i,num)
+# print_num_from_1_to_n(1,5)
+
+#q2: wap to print numbers from n to 1 
+
+# def print_num_from_n_to_1(num):
+#     if num==0:
+#         return
+#     print(num)
+#     num-=1
+#     print_num_from_n_to_1(num)
+# print_num_from_n_to_1(5) 
+
+
+
+
+
+    
+
+   
