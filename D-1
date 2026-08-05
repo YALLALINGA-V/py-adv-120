@@ -1,0 +1,213 @@
+#-----------if-condition--------------------------------
+time=input("enter the time:")
+if (time <= '9:15'):
+   print("can come in the class")
+else:
+   print("levae the class")
+ 
+
+#---------------------------------------------------------------------------------------------------------
+list=(["mango","apple","bannana","jack-fruit","grapes"])
+print(list)
+
+#slicing
+list=([10,20,30,13,45,7,18,33,10,19])
+s1=list[:5]
+s2=list[6:]
+s3=s1+s2
+print(s1)
+print(s2)
+print(s3)
+
+#-------------------------------------------------prime number's------------------------------------------------
+
+
+n= int(input())
+count =0
+for i in range(1,n+1):
+    if (n%i==0):
+        count=count+1
+if(count==2):
+     print("it's a prime number")
+    
+else:
+        print("nope it's not a prime number")
+
+#--------------------------------------------------febunaci series----------------------------------------
+
+n = int(input("enter the no:"))
+sum=1
+print("feb series:")
+for i in range(n):
+    sum=sum+sum
+    print(sum)
+
+#---------------------------------------armstrong number-------------------------------------------------------
+n = input("enter the number:")
+sum=0
+for i in n:
+    nu=int(i)
+    sum=sum+nu*nu*nu
+    n=int(n)
+if(sum==n):
+    print("it's armstrong")
+#-------------------------------------------------multiple keyword--------------------------------------------------
+def sum_numbers(*numbers):
+    total = sum(numbers)
+    print(f"sum:{total}")
+sum_numbers(1,2,3,4,5)
+
+#-----------------------------------------------questions-------------------------
+# 1.revers a number from 10-1
+# 2.wap to count the char in the string
+# 3.wap to find leap year
+# 4.count vowels in a string
+# 5.swap tonumbers
+# 6.user credntioals
+# 7.banking system
+# 8.wap to genrate emp id
+# 9.strong user name strong password
+
+#-----------------------------------------------------------1.resvers---------------------------------------------------
+for i in range(10):
+    print(10-i)
+
+#---------------------------------------------------------2.count  char------------------------------------------------------
+ch= input("enter the string:")
+count=0
+for c in ch:
+    if(c==ch):
+        count=count+1
+# print("count of the distinct charectr's =",count)
+print("count of charecter's=",len(ch))
+
+#--------------------------------------------------------3.leap year--------------------------------------------
+
+yr=int(input())
+if yr%100==0:
+    if yr%4==0 and yr%400 ==0:
+        print("it's leap year")
+    else:
+        print("not an leap year:")
+else:
+    if yr%4==0:
+        print("it's an leap year")
+    else:
+        print("not an leap year")
+
+#------------------------------------------------vowel's in a string-------------------------------------------
+
+inp=input("enter the string:")
+vowels=['a','e','i','o','u','A','E','I','O','U']
+if(inp=='a'or'e'or'i'or'o'or'u'or'A'or'E'or'I'or'O'or'U'):
+    print("vowels are in the string")
+
+#-----------------------------------------------------swaping two number's-------------------------------------------
+a=int(input('enter the 1st no:'))
+b=int(input('enter the 2nd no:'))
+print("before swap a=",a,"& b=",b)
+a,b=b,a
+print("after swap a=",a,"& b=",b)
+
+
+#-------------------------------------------------user cerdentials----------------------------------------------------------
+u_n="nani"
+u_p="nani@ananya0410"
+user=input("enter user name:")
+pas=input("enter the password:")
+if(u_n==user):
+    print("cheching password")
+else:
+    print("invalid user name")
+if(u_p==pas):
+    print("password is correct:")
+else:
+    print("password incorrect")
+if(u_n==user and u_p==pas):
+    print("login succesfull")
+
+#-----------------------------------------------banking system--------------------------------------------------
+
+d={'nani0410':'nani@0410','shiv0403':'shiv@0403','manoj2714':'manoj@2714','guna1329':'guna@1329'}
+d1={'nani0410':"nani@ananya","shiv0403":"shiv@arpitha","manoj2714":"manoj@shivani","guna1329":"guna@aniktha"}
+op=0
+amount=0
+balence=50000
+user=input("enter the name")
+user_pas=input("enter the password")
+if user in d.keys():
+            print("checking password")
+else:
+            print("invalid user name")
+if user_pas==d[user]:
+            print("login succefull enter the type of opperation:\n")
+
+while op!=4:
+        print("1.deposite,2.withdrwa,3.check balence,4.exit\n")
+        op=int(input("enter the option:"))
+        if(op==1):
+              print("enter the deposite amount:")
+              amount=int(input())
+              balence+=amount
+        if(op==2):
+              print("enter the withdraw amount:")
+              amount=int(input())
+              balence-=amount
+        if(op==3):
+              print("balence=",balence)
+        if(op==4):
+              print("exiting the atm")
+              exit(0)
+
+
+#-----------------------------------------------------emp id-----------------------------------------------
+import random
+emp_n=input()
+emp_id=random.randint(0,1000)
+id=emp_n[:4]+str(emp_id)
+print("emp id:",id)
+
+#------------------------------------------------------user name & strong password-------------------------------------------
+
+user=input("enter user name:")
+pas=input("enter your current password:")
+sp=0
+num=0
+digi=0
+fl=pas[:1]
+for i in pas:
+    while(sp<=0 and num<=0 and digi <=0):
+        if i=='!'or'@'or'#'or'$'or'%'or'^'or'&'or'*'or'-'or'_':
+            print("consist of special char 30'%' stronger")
+            sp=1
+            if i=='1'or'2'or'3'or'4'or'5'or'6'or'7'or'8'or'9'or'0':
+                    print("consist of numbers 60'%' stronger")
+                    num=1
+                    if len(pas)>8:
+                            digi=1
+                            print("even consist of number's 80'%' strong")
+                            if i==pas.isupper():
+                               print("starting letter is captial 100'%' stronger")
+                            else:
+                                print("does not consist of starting captial leeter")
+                    else:
+                            print("does not consist of more than 8 charecter's")
+            else:
+                        print("does not consist of nums")
+        else:
+            print("does not consist of special char")
+if(sp==1 and num==1 and digi==1):
+     print("that's an solid password")
+else:
+    print("not an strong password try to rest the password")
+b=["HARRY POTTER","Game of thrones","city of bones"]
+print(len(b))
+        
+    
+        
+        
+        
+
+        
+    
+        

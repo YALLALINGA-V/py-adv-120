@@ -1,0 +1,311 @@
+#------------------------------------------------------library management-----------------------------------------
+
+# class lib:
+#     def __init__(self,book_name,b_id,author,edition,gener):
+#         self.book_name=book_name
+#         self.b_id=b_id
+#         self.author=author
+#         self.edition=edition
+#         self.gener=gener
+#     def display(self):
+#         print(self.book_name)
+#         print(self.b_id)
+#         print(self.edition)
+#         print(self.gener)
+# l=lib(input(),"0408","jk rowling","7th","fiction")
+# l.display()
+# class maint:
+#     name=input("enter the name:")
+#     bid='0408'
+#     edi='2nd'
+#     auth='jk rowling'
+#     gener='fiction'
+    
+#----------------------------------------------inhertence------------------------------
+
+# class person:
+#     def __init__(self,name,age,bloodgroup,height,weight,phone_no):
+#         self.name=name
+#         self.age=age
+#         self.bloodgroup=bloodgroup
+#         self.height=height
+#         self.weight=weight
+#         self.phone_no=phone_no
+
+# class student(person):
+#     def __init__(self,name,age,bloodgroup,height,weight,phone_no,sem,sec,fee):
+#         super().__init__(name,age,bloodgroup,height,weight,phone_no)
+#         self.sem=sem
+#         self.sec=sec
+#         self.fee=fee
+#     def display(self):
+#                 print(self.name)
+#                 print(self.age)
+#                 print(self.bloodgroup)
+#                 print(self.height)
+#                 print(self.weight)
+#                 print(self.phone_no)
+#                 print(self.sem)
+#                 print(self.sec)
+#                 print(self.fee)
+# n=student("nani","19","AB+ve","178","89","6362793918","4","c","31360")
+# n.display()
+
+#------------------------------------------------multiple inheritence-----------------------------------------------------
+
+# class father:
+#     def fdisplay(self):
+#         print("i am father")
+# class mother():
+#     def mdisplay(self):
+#         print("i am mother")
+# class child (father,mother):
+#     def cdisplay(self):
+#         print("i am child")
+# c=child()
+# c.cdisplay()
+# c.fdisplay()
+# c.mdisplay()
+
+
+#--------------------------------------------------------hubrid inhertence-------------------------------------------------------
+
+# class emp:
+#     def __init__(self,name,e_id,sal,domin):
+#         self.name=name
+#         self.e_id=e_id
+#         self.sal=sal
+#         self.domin=domin
+# class devloper(emp):
+#     def __init__(self,name,e_id,sal,domin,skill,pro_id):
+#         super().__init__(name,e_id,sal,domin)
+#         self.skill=skill
+#         self.pro_id=pro_id
+# class hr(devloper):
+#     def __init__(self, name, e_id, sal, domin, skill, pro_id,hr_id,manges):
+#         super().__init__(name, e_id, sal, domin, skill, pro_id)
+#         self.hr_id=hr_id
+#         self.manges=manges
+#     def display(self):
+#         print("name:",self.name)
+#         print(self.e_id)
+#         print(self.sal)
+#         print(self.domin)
+#         print(self.skill)
+#         print(self.pro_id)
+#         print(self.hr_id)
+#         print(self.manges)
+# h=hr("tony","3000","5000000","ai-dev","genuis","2019","30","projects")
+# h.display()
+
+#-----------------------------------------------------multi-level--------------------------------------------------------------
+
+
+# class emp:
+#     def __init__(self,name,e_id,sal,domin):
+#         self.name=name
+#         self.e_id=e_id
+#         self.sal=sal
+#         self.domin=domin
+# class devloper(emp):
+#     def __init__(self,name,e_id,sal,domin,skill,pro_id):
+#         super().__init__(name,e_id,sal,domin)
+#         self.skill=skill
+#         self.pro_id=pro_id
+# class hr(devloper):
+#     def __init__(self, name, e_id, sal, domin, skill, pro_id,hr_id,manges):
+#         super().__init__(name, e_id, sal, domin, skill, pro_id)
+#         self.hr_id=hr_id
+#         self.manges=manges
+#     # def display(self):
+#     #     print("name:",self.name)
+#     #     print(self.e_id)
+#     #     print(self.sal)
+#     #     print(self.domin)
+#     #     print(self.skill)
+#     #     print(self.pro_id)
+#     #     print(self.hr_id)
+#     #     print(self.manges)
+# class owner(hr):
+#     def __int__(self, name, e_id, sal, domin, skill, pro_id,hr_id,manges,owns):
+#         super().__init__(name, e_id, sal, domin, skill, pro_id,hr_id,manges)
+#         self.owns=owns
+# h=owner("tony","3000","5000000","ai-dev","genuis","2019","30","projects","company")
+# h.display()
+
+
+
+#-----------------------------------------------------hybridd---------------------------------------------------------------------
+
+# class crikect:
+#     def __init__(self,pname,psal,pnation,page):
+#         self.pname=pname
+#         self.page=page
+#         self.psal=psal
+#         self.pnation=pnation
+# class batsman(crikect):
+#     def __init__(self, pname, psal, pnation, page,b_id,runs):
+#         crikect.__init__(self,pname, psal, pnation,page)
+#         self.b_id=b_id
+#         self.runs=runs
+# class blower(crikect):
+#     def __init__(self, pname, psal, pnation, page,bo_id,wickets):
+#         crikect.__init__(self,pname, psal, pnation, page)
+#         self.bo_id=bo_id
+#         self.wickets=wickets
+# class allrounder(batsman,blower):
+#     def __init__(self, pname, psal, pnation, page, b_id,runs,bo_id,wickets,allrounderpoints):
+#         batsman.__init__(self,pname, psal, pnation, page, b_id, runs)
+#         blower.__init__(self,pname, psal, pnation, page,bo_id,wickets)
+#         self.allrounderpoints=allrounderpoints
+#     def display(self):
+#         print(self.pname)
+#         print(self.psal)
+#         print(self.pnation)
+#         print(self.page)
+#         print(self.b_id)
+#         print(self.runs)
+#         print(self.bo_id)
+#         print(self.wickets)
+#         print(self.allrounderpoints)
+# a=allrounder("vk","50000","india","37","18","9736","18","10","100")
+# a.display()
+
+
+#----------------------------------------------OVER-RIDING---------------------------------
+# class parent:
+#     def display(self):
+#         print("i am tony")
+# class child(parent):
+#     def display(self):
+#         print("i am morgan stark")
+# c=child()
+# c.display()
+# #--printing both the parent and chlid--------
+# class parent:
+#     def display(self):
+#         print("i am tony")
+# class child(parent):
+#     def display(self):
+#         parent.display(self)
+#         print("i am morgan stark")
+# c=child()
+# c.display()
+
+#------------------------------------------ENCAPSULATION--------------------------------------------
+
+
+#Encapsulation
+# class BankAccount:
+#   def __init__(self, balance):
+#     self.__balance = balance
+#   def deposit(self,amount):
+#     self.__balance += amount
+#   def get_balance(self):
+#        print(self.__balance)
+# account = BankAccount(1000)
+# account.deposit(500)
+# account.get_balance()
+
+
+
+#----------------------------------------------mini-project's------------------------------------------
+
+#----------------------------------------------1.LIBRARY MANG--------------------------------------------
+import random
+b=["HARRY POTTER","Game of thrones","city of bones"]
+n=len(b)
+a=["JK ROWLING","jj martin","cassandra clare"]
+g="FICTION"
+book_id=[1000,1001,1002]
+q=[3,3,3]
+bono={"HARRY POTTER":"1","Game of thrones":"2","city of bones":"3"}
+inp= " "
+ch=int(input("\nenter 1.For member login\n--0r---\n2.For admin login:\n"))
+op=1
+if(ch==1):
+  while(op!=4):
+    op=int(input("enter 1.To search a book \n 2.To Borrow\n3.return\n4.To exit:"))
+    class books:
+        def __init__(self,book_name,author,gener,b_id,quantity):
+            self.book_name=book_name
+            self.author=author
+            self.gener=gener
+            self.b_id=b_id
+            self.quantity=quantity
+    class member(books):
+        member_id=["100","101","102"]
+        def __init__(self,book_name,author,gener,b_id,quantity,mem_id,search):
+            books.__init__(self,book_name,author,gener,quantity,b_id)
+            self.mem_id=mem_id
+            self.search=search
+        if(op==1):
+          def searchh():
+                  inp=input("enter the book name of you want:")
+                  for i in range(n):
+                      if inp==b[i]:
+                          print("book found 🥳🥳")
+                          print("author is:",a[i])
+                          print("gener is",g)
+                          print("quantity:",q[i])
+                          print("book id:",book_id[i])
+                          print("book no:",bono.values())
+          searchh()
+        elif(op==2):
+          def borrow():
+              binp=input("enter the book id:")
+              bn=int(input("enter the book number:"))
+              if(q[bn-1]>=0):
+                print("book is granted 😁")
+                q[bn-1]-=1
+          borrow()
+        elif(op==3):
+          def returnn():
+              br=input("enter the book name:")
+              bn=int(input("enter the book number:"))
+              q[bn-1]+=1
+              print("BOOK is returned succefully😄😄")
+          returnn()
+        elif(op==4):
+            exit
+        else:
+            print("invalid choice")
+else:
+  class lib:
+      print(op)
+      while(op!=3):
+        op=int(input("enter 1.To search book\n2.To Add new book\n3.To exit \n"))
+        print(op)
+        if(op==1):
+          def searchh():
+                  inp=input("enter the book name of you want:")
+                  for i in range(n):
+                      if inp==b[i]:
+                          print("book found 🥳🥳")
+                          print("author is:",a[i])
+                          print("gener is",g)
+                          print("quantity:",q[i])
+                          print("book id:",book_id[i])
+                          print("book no:",bono.values()) 
+          searchh() 
+        elif(op==2):
+          def add():
+              lb=input("enter the book name:")
+              lq=int(input("enter the book no:"))
+              la=input("enter the author name:")
+              lid=random.randint(1000,2000)
+              b.append(lb)
+              a.append(la)
+              q.append(lq)
+              book_id.append(lid)
+              print("after adding the new book :")
+              print(b,'\n',a,'\n',book_id,'\n',q)
+          add()
+        else:
+            exit(0)
+            
+            
+
+        
+
+        

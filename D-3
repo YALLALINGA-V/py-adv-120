@@ -1,0 +1,174 @@
+# #distinct ele in array
+# list=([10,20,33,18,13,45,7,18,33,10,19])
+# list.sort()
+# d=set()
+# n=len(list)-1
+# for i in range(n):
+#     if list[i]==list[i+1]:
+#       print("duplicate found\n")
+#       d.add(list[i])
+# print("duplicate ele are:",d)
+# #find the second largest no in array
+# list=([98,89,13,56,33,18])
+# n=len(list)
+# max=0
+# sec_max=0
+# for i in n:
+#   if list[i]>list[i+1]:
+#     max=list[i]
+#   list.sort()
+#   sec_max=list[n-1]
+# print(max)
+# print(sec_max)
+
+
+# list=([98,89,13,56,33,18])
+# n=len(list)-1
+# max=0
+# sec_max=0
+# for i in range(n):
+#   if list[i]>list[i+1]:
+#     max=list[i]
+#   list.sort()
+#   if list[i]!=max:
+#     sec_max=list[n-1]
+# print(max)
+# print(sec_max)
+
+# list=([98,89,13,56,33,18])
+# n=len(list)
+# co=0
+# ce=0
+# for i in range(n):
+#   if list[i]%2==0:
+#     ce+=1
+#   else:
+#     co+=1
+# print("total no of even numver's:",ce)
+# print("total no of odd numver's:",co)
+
+
+# #reverse arr
+# # list=([98,89,13,56,33,18])
+# # rev=[]
+# # n=len(list)
+# # for i in range(n-1,-1,-1):
+# #   print(list[i])
+# #   rev.append(list[i])
+# # print(rev)
+
+# # #rev arr using poinetr/swaping
+# # Method 1
+
+# arr = [20,20,14,29,0]
+
+# start = 0
+
+# end = len(arr) - 1
+
+# while start < end:
+
+#   arr[start], arr[end] = arr[end], arr[start]
+
+#   start +=1
+
+#   end -= 1
+
+# print("Reverse of array is:", arr)
+
+
+# #binary search
+# list=([10,20,30,13,45,7,18,33,10,19])
+# list.sort()
+# high=len(list)-1
+# low=0
+# mid=(low+high)//2
+# key=18
+# while low<high:
+#     if (list[mid]==key):
+#       break;
+#     elif list[mid] > key:
+#       high=mid-1
+#     elif list[mid]<key:
+#       low=mid+1
+# if (list[mid]==key):
+#     print("ele found at index:",mid)
+# else:
+#       print("ele not found")
+
+# #lambda fun
+# #syntax :- lambda variables : condition
+
+# #ex:
+# li=[98,18,36,19,46]
+# od=list(filter(lambda x :(x%2!=0),li))
+# print(od)
+
+# #move all zeros to end
+# li=[]
+# inp=int(input("enter the size of array:"))
+# for i in range(inp):
+#   ele=int(input())
+#   li.append(ele)
+# for i in li:
+#   if i==0:
+#     li.remove(i)
+#     li.append(i)
+# print(li)
+
+# #move all zeros to end
+# li=[]
+# inp=int(input("enter the size of array:"))
+# for i in range(inp):
+#   ele=int(input())
+#   li.append(ele)
+# for i in li:
+#   if i==0:
+#     li.remove(i)
+#     li.append(i)
+# print(li)
+
+
+# #reverse
+# st=input()
+# temp=""
+# n=len(st)
+# li=[]
+# for i in st:
+#   li.append(i)
+# print(li)
+
+
+
+# inp=input("enter the input string:")
+# rev=inp[::-1]
+# if inp==rev:
+#   print("palindrom")
+# else:
+#   print("not a plaindrom")
+
+
+
+# #find missing number:
+# # li=[1,2,3,4,5]
+# # n=len(li)+1
+# # for i in range(n-1):
+# #   if li[i]!=i+1:
+# #       print(i+1)
+# #-----------------method -2---------------------
+# li=[1,2,3,4,5]
+# su=sum(li)
+# n=len(li)+1
+# total=n*(n+1)//2
+# print(total-su)
+
+
+# #char freq
+# inp=input("enter the string:")
+# freq={}
+# for i in inp:
+#   if i in freq:
+#     freq[i]+=1
+#   else:
+#     freq[i]=1
+# print(freq)

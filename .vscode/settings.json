@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
+    "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+    "code-runner.runInTerminal": true,
+    "terminal.integrated.focusAfterRun": "terminal"
+}
