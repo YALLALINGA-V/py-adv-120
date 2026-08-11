@@ -2,8 +2,8 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         d={}
         d1={}
-        # if len(s)!=len(t):
-        #     return False
+        if len(s)!=len(t):
+            return False
         for i in s:
             if i in d:
                  d[i]+=1
